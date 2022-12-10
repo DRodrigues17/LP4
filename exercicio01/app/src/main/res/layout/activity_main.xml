@@ -52,8 +52,15 @@
 
         app:layout_constraintTop_toBottomOf="@+id/et_digite_aqui"
         app:layout_constraintEnd_toEndOf="@+id/tv_seu_nome"
-
-        android:onClick="adcionarTextoFrase"
+        />
+    <TextView
+        android:id="@+id/tv_frase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="seu nome vai aparecer aqui"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_seu_nome"
+        app:layout_constraintTop_toBottomOf="@+id/bt_ok"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
