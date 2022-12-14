@@ -58,6 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="seu nome vai aparecer aqui"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/tv_seu_nome"
         app:layout_constraintTop_toBottomOf="@+id/bt_ok"
