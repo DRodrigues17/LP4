@@ -1,4 +1,4 @@
-package br.com.fundatec.exerciciologin
+package br.com.fundatec.login
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

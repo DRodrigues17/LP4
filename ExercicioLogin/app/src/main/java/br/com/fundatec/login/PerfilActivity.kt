@@ -1,4 +1,4 @@
-package br.com.fundatec.exerciciologin
+package br.com.fundatec.login
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

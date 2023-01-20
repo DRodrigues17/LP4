@@ -1,4 +1,4 @@
-package br.com.fundatec.exerciciologin
+package br.com.fundatec.login
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
