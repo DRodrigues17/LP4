@@ -2,7 +2,6 @@ package br.com.fundatec.login.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -29,9 +28,10 @@ class LoginActivity : AppCompatActivity() {
         configLoginButton()
         viewModel.viewState.observe(this) { state ->
             when (state) {
-                is ViewState.ShowError -> showSnack()
-                ViewState.ShowErrorEmail -> TODO()
-                ViewState.ShowErrorPassword -> TODO()
+                is ViewState.ShowNullCampsError -> showNullCampsSnack()
+                ViewState.ShowInvalidEmailError -> showInvalidEmailSnack()
+                ViewState.ShowInvalidPasswordError -> showInvalidPasswordSnack()
+                ViewState.ShowSuccess -> goToMainActivity()
             }
         }
     }
@@ -45,18 +45,31 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun showToast() {
-        Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT).show()
-    }
 
-    private fun showSnack() {
+    private fun showNullCampsSnack() {
         val container = findViewById<ConstraintLayout>(R.id.container)
         Snackbar
-            .make(container, "Deu ruim!", Snackbar.LENGTH_LONG)
-            .setAction("Ok") {
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                startActivity(intent)
-            }
+            .make(container, "Preencha todos os campos", Snackbar.LENGTH_LONG)
             .show()
+    }
+
+    private fun showInvalidEmailSnack() {
+        val container = findViewById<ConstraintLayout>(R.id.container)
+        Snackbar
+            .make(container, "E-mail inválido", Snackbar.LENGTH_LONG)
+            .show()
+    }
+
+    private fun showInvalidPasswordSnack() {
+        val container = findViewById<ConstraintLayout>(R.id.container)
+        Snackbar
+            .make(container, "Senha inválida", Snackbar.LENGTH_LONG)
+            .show()
+    }
+
+
+    private fun goToMainActivity() {
+        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 }
