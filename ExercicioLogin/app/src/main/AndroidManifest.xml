@@ -15,6 +15,15 @@
         android:theme="@style/Theme.HelloWorld"
         tools:targetApi="31">
         <activity
+            android:name=".character.NewCharacterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_new_character"
+            android:theme="@style/Theme.HelloWorld.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".BottomNavigationActivity"
             android:exported="false"
             android:label="@string/title_activity_bottom_navigation">

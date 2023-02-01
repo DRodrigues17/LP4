@@ -1,11 +1,15 @@
 package br.com.fundatec.home.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import br.com.fundatec.R
+import br.com.fundatec.character.NewCharacterActivity
 import br.com.fundatec.databinding.ActivityMainBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,6 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         configActionBar()
         configTab()
+
+        findViewById<FloatingActionButton>(R.id.fab_new_character).setOnClickListener {
+            val navegateToNewCharacterActivity = Intent(this, NewCharacterActivity::class.java)
+            startActivity(navegateToNewCharacterActivity)
+        }
     }
 
     private fun configTab() {

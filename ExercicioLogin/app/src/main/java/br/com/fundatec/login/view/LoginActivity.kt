@@ -45,7 +45,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-
     private fun showNullCampsSnack() {
         val container = findViewById<ConstraintLayout>(R.id.container)
         Snackbar
