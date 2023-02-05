@@ -15,8 +15,8 @@
     <string name="description">Descrição do personagem</string>
     <string name="age">Idade do personagem</string>
     <string name="birthday">Dia do aniversário</string>
-    <string name="return_button">VOltar para a home</string>
-    <string name="create">criar um novo personagem</string>
+    <string name="return_button">Voltar para a home</string>
+    <string name="create">criar o personagem</string>
     <string-array name="lista_editoras">
         <item>MARVEL</item>
         <item>DC</item>

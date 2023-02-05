@@ -10,7 +10,7 @@
         tools:context=".character.NewCharacterActivity">
 
         <ImageView
-            android:id="@+id/charcter_image"
+            android:id="@+id/iv_character"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:src="@drawable/ic_character_image"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/name"
             android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@id/charcter_image"
+            app:layout_constraintTop_toBottomOf="@id/iv_character"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -90,21 +90,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/bt_return"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/return_button"
+            android:src="@drawable/home_icon"
             app:layout_constraintTop_toBottomOf="@+id/tiet_birthday"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/bt_create"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/create"
+            android:src="@drawable/ic_new_character"
             app:layout_constraintTop_toBottomOf="@+id/tiet_birthday"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
